@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HackathonService } from 'src/app/services/hackathon.service';
-import { Partido } from 'src/app/models/partido.model';
-import { CandidatoPromesa } from 'src/app/models/candidato-promesa.model';
+import { Partido } from 'src/app/models/party';
 
 @Component({
   selector: 'app-parties-list',
@@ -11,7 +10,6 @@ import { CandidatoPromesa } from 'src/app/models/candidato-promesa.model';
 })
 export class PartiesListComponent implements OnInit {
   public parties: [Partido];
-  public todo: [CandidatoPromesa];
 
   constructor(private hackathonService: HackathonService) {
     
@@ -25,7 +23,8 @@ export class PartiesListComponent implements OnInit {
     this.hackathonService.listarPartidos().subscribe(response => {
       console.log(response);
       
-      this.todo = response.data.Items
+      this.parties = response.data.Items
+      console.log(this.parties)
     })
   }
 

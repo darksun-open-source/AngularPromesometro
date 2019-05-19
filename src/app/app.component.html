@@ -1,1 +1,37 @@
+<header class="header-6">
+    <div class="branding">
+        <a routerLink="/main" class="nav-link nav-icon">
+            <clr-icon shape="thermometer"></clr-icon>
+            <span>Promesómetro</span>
+        </a>
+    </div>
+    <div class="header-nav">
+        <a routerLink="/parties" class="active nav-link nav-icon">
+            <clr-icon shape="container"></clr-icon>
+        </a>
+        <a routerLink="/candidates" class="nav-link nav-icon">
+            <clr-icon shape="users"></clr-icon>
+        </a>
+    </div>
+
+    <div class="header-actions">
+        <clr-dropdown>
+            <button class="nav-icon" clrDropdownTrigger>
+                <clr-icon shape="user"></clr-icon>
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+                <a href="..." clrDropdownItem>About</a>
+                <a href="..." clrDropdownItem>Preferences</a>
+                <a href="..." clrDropdownItem>Log out</a>
+            </clr-dropdown-menu>
+        </clr-dropdown>
+    </div>
+</header>
+
 <router-outlet></router-outlet>
+
+<footer>
+    <p>Made by SimMans 2019</p>
+    <p>Project Promesometro Hackathon UVG 2019.</p>
+</footer>
